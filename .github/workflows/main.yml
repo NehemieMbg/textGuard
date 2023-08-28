@@ -12,14 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v2
+      - uses: npm/setup-node@v2
         with:
           version: '7'
 
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-          cache: 'npx'
+          cache: 'npm'
 
       - run: npm install --frozen-lockfile
       - run: npm run lint && npm run build
