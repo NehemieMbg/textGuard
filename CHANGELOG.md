@@ -1,5 +1,11 @@
 # @nemi-typescript/textguard
 
+## 0.0.2
+
+### Patch Changes
+
+- db109ab: initial
+
 ## 0.0.6
 
 ### Patch Changes
