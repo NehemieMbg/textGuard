@@ -5,6 +5,6 @@
  * @returns the computation of the twon inputs number
  */
 export const add = (a: number, b: number) => {
-  // update
+  // return number
   return a + b;
 };
