@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- b181140: Initialization
+
+## 0.0.2
+
+### Patch Changes
+
 - da118ed: Initial
 
 ## 0.0.5
