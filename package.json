@@ -1,18 +1,19 @@
 {
-  "name": "textguard",
-  "version": "1.0.0",
+  "name": "@nemi-typescript/textguard",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "vitest",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "test": "vitest run",
     "lint": "tsc",
+    "ci": "npm run lint && npm run test && npm run build",
+    "release": "npm run lint && npm run test && npm run build && changeset publish",
     "version": "changeset verions",
-    "publish": "changeset publish",
-    "ci": "npm run lint && npm run test && npm run build"
+    "publish": "changeset publish"
   },
   "keywords": [],
   "author": "",
