@@ -1,5 +1,11 @@
 # @nemi-typescript/textguard
 
+## 0.0.4
+
+### Patch Changes
+
+- 7e04789: initial
+
 ## 0.0.3
 
 ### Patch Changes
