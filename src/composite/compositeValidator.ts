@@ -1,6 +1,7 @@
 import {
   validateEmail,
   validateUsername,
+  validatePassword,
 } from '../validators/stringValidators';
 import { ValidationError } from '../errors/validationErrors';
 
@@ -35,6 +36,26 @@ export const isValidEmail = (email: string): boolean => {
 export const isValidUrsername = (username: string): boolean => {
   try {
     validateUsername(username);
+    return true;
+  } catch (error) {
+    if (error instanceof ValidationError) {
+      return false;
+    }
+    throw error;
+  }
+};
+
+/**
+ * Validates the given password based on a predefined regular expression pattern.
+ * Throws a ValidationError if the password is not valid.
+ *
+ * @param {string} password - The password to validate.
+ * @throws {ValidationError} Throws an error if the password is not valid.
+ * @returns {boolean} Returns true if the password is valid, false otherwise.
+ */
+export const isValidPassword = (password: string): boolean => {
+  try {
+    validatePassword(password);
     return true;
   } catch (error) {
     if (error instanceof ValidationError) {

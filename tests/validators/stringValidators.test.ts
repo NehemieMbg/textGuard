@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'vitest';
-import { validateEmail, validateUsername } from '../../src';
+import { validateEmail, validateUsername, validatePassword } from '../../src';
 import { ValidationError } from '../../src/errors/validationErrors';
 
 describe('validateEmail', () => {
@@ -36,6 +36,20 @@ describe('validateUsername', () => {
     expect(() => validateUsername('.@fiefnefe44')).toThrow(ValidationError);
     expect(() => validateUsername('Username')).toThrow(
       'Username must start with a lowercase letter, contain only letters, numbers, spaces, periods, hyphens, or underscores, and be between 3 to 15 characters long.'
+    );
+  });
+});
+
+describe('validatePassword', () => {
+  it('shoud validate the password', () => {
+    expect(() => validatePassword('StrongPassword92.')).not.toThrow();
+  });
+
+  it('should throw an ValidationError for an invalid password', () => {
+    expect(() => validatePassword('password')).toThrow(ValidationError);
+    expect(() => validatePassword('')).toThrow(ValidationError);
+    expect(() => validatePassword('missingSpecialCharacter')).toThrow(
+      'Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character (allowed: @$!%*?&.), and be at least 8 characters long.'
     );
   });
 });

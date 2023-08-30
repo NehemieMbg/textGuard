@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'vitest';
-import { isValidEmail, isValidUrsername } from '../../src';
+import { isValidEmail, isValidUrsername, isValidPassword } from '../../src';
 
 describe('isValidEmail', () => {
   it('should return true if the email is valid', () => {
@@ -25,5 +25,17 @@ describe('isValidUrsername', () => {
     expect(isValidUrsername('Username')).toBe(false);
     expect(isValidUrsername('@username')).toBe(false);
     expect(isValidUrsername('username%')).toBe(false);
+  });
+});
+
+describe('isValidPassword', () => {
+  it('should return true if the password is valid', () => {
+    expect(isValidPassword('ValidPassword94.')).toBe(true);
+  });
+  it('should return false if the password is not valid', () => {
+    expect(isValidPassword('NotaValidPassword')).toBe(false);
+    expect(isValidPassword('notavalidpassword')).toBe(false);
+    expect(isValidPassword('notavalidpassword8!')).toBe(false);
+    expect(isValidPassword('NotaValidPassword1')).toBe(false);
   });
 });

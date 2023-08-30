@@ -31,3 +31,21 @@ export const validateUsername = (username: string): void => {
     );
   }
 };
+
+/**
+ * Validates a password against a predefined regular expression.
+ *
+ * @param {string} password - The password to validate.
+ * @throws {ValidationError} - Throws an error if the password is not valid.
+ * @returns {void} - Returns nothing if the password address is valid.
+ */
+export const validatePassword = (password: string): void => {
+  const passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,}$/;
+
+  if (!passwordRegex.test(password)) {
+    throw new ValidationError(
+      'Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character (allowed: @$!%*?&.), and be at least 8 characters long.'
+    );
+  }
+};
