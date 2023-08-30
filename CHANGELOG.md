@@ -1,5 +1,11 @@
 # @nemi-typescript/textguard
 
+## 0.0.4
+
+### Patch Changes
+
+- bb77c6c: Email validator
+
 ## 0.0.3
 
 ### Patch Changes
