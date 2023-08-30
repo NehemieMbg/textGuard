@@ -64,3 +64,21 @@ export const isValidPassword = (password: string): boolean => {
     throw error;
   }
 };
+
+/**
+ * Validates fi the given passwords are the same and  valid
+ *
+ * @param {string} password - The password to validate.
+ * @param {string} confirmPassword - The password confirmation to validate.
+ * @returns {boolean} Returns true if the passwords are the same, false otherwise.
+ */
+export const arePasswordsMatching = (
+  password: string,
+  confirmPassword: string
+): boolean => {
+  if (password !== confirmPassword) {
+    return false;
+  }
+
+  return true;
+};
