@@ -1,5 +1,11 @@
 # @nemi-typescript/textguard
 
+## 0.0.6
+
+### Patch Changes
+
+- d2ce545: Including major function for data validation
+
 ## 0.0.5
 
 ### Patch Changes
