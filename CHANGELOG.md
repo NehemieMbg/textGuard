@@ -1,5 +1,11 @@
 # @nemi-typescript/textguard
 
+## 0.0.3
+
+### Patch Changes
+
+- 0a171cf: Removing the files that should not be sent
+
 ## 0.0.2
 
 ### Patch Changes
