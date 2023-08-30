@@ -19,6 +19,7 @@
     "version": "changeset verions",
     "publish": "changeset publish"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "MIT",
