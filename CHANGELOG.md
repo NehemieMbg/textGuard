@@ -1,5 +1,11 @@
 # @nemi-typescript/textguard
 
+## 1.0.0
+
+### Major Changes
+
+- f23d8d6: Verify email data input
+
 ## 0.0.4
 
 ### Patch Changes
