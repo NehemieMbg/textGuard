@@ -3,3 +3,4 @@ src
 pnpm-lock.yaml
 tsconfig.json
 vite.confit.ts
+.github
