@@ -1,5 +1,11 @@
 # @nemi-typescript/textguard
 
+## 0.0.7
+
+### Patch Changes
+
+- 7b30d6f: New function and updated readme
+
 ## 0.0.6
 
 ### Patch Changes
