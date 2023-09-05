@@ -1,5 +1,7 @@
 # Introduction
 
+[![Website](https://img.shields.io/badge/Visit%20Our-Website-blue)](https://nehemie-textguard.vercel.app/docs/validation)
+
 Welcome to the @nehemie/textguard documentation!
 
 ### What is @6nehemie/textguard?
@@ -21,19 +23,39 @@ Whether you're an individual developer aiming to improve the security and reliab
 
 ## Installation
 
+System Requirements:
+Before installing @6nehemie/textguard, please ensure that your system meets the following requirements:
+
+- Node.js: 16.14 or above. Note that this library uses ES modules, so make sure your Node.js environment supports it.
+- TypeScript: Version 5.2.2 or above if you are using TypeScript in your project.
+
+### Quick and Easy Installation Steps
+
+**Using npm:**
+
+To install @nehemie/textgurad via npm, run the following command:
+
 ```linux
 npm i @6nehemie/textguard
 ```
 
-or
+**Using yarn:**
+
+To install @nehemie/textgurad via yarn, run the following command:
 
 ```linux
 yarn add @6nehemie/textguard
 ```
 
-## Usage
+After installation, you are ready to import @6nehemie/textguard into your project and start laveragin its powerful features.
+
+## Quick Start
 
 **TypeScript**
+
+### Example Usage
+
+Here's a simple example that demonstrates email validation:
 
 ```typescript
 import { isValidEmail } from '@6nehemie/textguard';
@@ -41,6 +63,8 @@ import { isValidEmail } from '@6nehemie/textguard';
 const email = 'example@example.com';
 const validEmail = isValidEmail(email); // returns true
 ```
+
+And that's it! You've successfully validated an email address.
 
 ## Contributing
 
