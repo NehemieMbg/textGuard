@@ -2,6 +2,7 @@ import {
   validateEmail,
   validateUsername,
   validatePassword,
+  validateIsOldEnough,
 } from '../validators/stringValidators';
 import { ValidationError } from '../errors/validationErrors';
 
@@ -81,4 +82,39 @@ export const arePasswordsMatching = (
   }
 
   return true;
+};
+
+/**
+ * Determines if a person with the given birth date is old enough based on a minimum age requirement.
+ *
+ * @param {number} minAge - The minimum age the person must be.
+ * @param {number} day - The day of the person's birth date (1-31).
+ * @param {number} month - The month of the person's birth date (1-12).
+ * @param {number} year - The year of the person's birth date.
+ * @returns {boolean} Returns true if the person is at least the specified minAge or older, false otherwise.
+ */
+export const isOldEnough = (
+  minAge: number,
+  day: number,
+  month: number,
+  year: number
+): boolean => {
+  validateIsOldEnough(minAge, day, month, year);
+  const currentDate = new Date();
+  const birthDate = new Date(year, month - 1, day);
+
+  let age = currentDate.getFullYear() - birthDate.getFullYear();
+
+  if (
+    currentDate.getMonth() < month - 1 ||
+    (currentDate.getMonth() === month - 1 && currentDate.getDate() < day)
+  ) {
+    age--;
+  }
+
+  if (age >= minAge) {
+    return true;
+  } else {
+    return false;
+  }
 };

@@ -4,6 +4,7 @@ import {
   isValidUrsername,
   isValidPassword,
   arePasswordsMatching,
+  isOldEnough,
 } from '../../src';
 
 describe('isValidEmail', () => {
@@ -56,5 +57,15 @@ describe('arePasswordsMatching', () => {
     expect(arePasswordsMatching('ValidPassword94.', 'ValidPassword94')).toBe(
       false
     );
+  });
+});
+
+describe('isOldEnough', () => {
+  it('should return true if the user is old enough', () => {
+    expect(isOldEnough(18, 3, 12, 2000)).toBe(true);
+  });
+
+  it('should return false if the user is not old enough', () => {
+    expect(isOldEnough(18, 3, 12, 2020)).toBe(false);
   });
 });
