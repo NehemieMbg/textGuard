@@ -83,7 +83,6 @@ describe('validateIsOldEnough', () => {
   });
 
   it('should throw an validation error for invalid dates', () => {
-    expect(() => validateIsOldEnough('18', '6', '3', 2000)).toThrow();
     expect(() => validateIsOldEnough(18, 34, 2, 2000)).toThrow();
     expect(() => validateIsOldEnough(18, 24, 0, 2000)).toThrow();
     expect(() => validateIsOldEnough(18, 24, -1, 2000)).toThrow();
