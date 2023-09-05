@@ -1,6 +1,6 @@
 # Introduction
 
-[![Website](https://img.shields.io/badge/Visit%20Our-Website-blue)](https://nehemie-textguard.vercel.app/docs/validation)
+[![Website](https://img.shields.io/badge/Visit%20Our-Website-blue)](https://nehemie-textguard.vercel.app)
 
 Welcome to the @nehemie/textguard documentation!
 
